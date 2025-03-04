@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "508700899317",
+    "project_id": "digitalnavtesting",
+    "storage_bucket": "digitalnavtesting.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508700899317:android:474565d5cb4c41bb7892bc",
+        "android_client_info": {
+          "package_name": "com.example.my_first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPapQvAMZ4JK9tkE6kFQza8k8Ny65pHCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
