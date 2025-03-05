@@ -1,11 +1,15 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';  //Import dotenv
+import 'package:flutter_dotenv/flutter_dotenv.dart';  // Import dotenv
 
 class OpenAIService {
-  final String apiKey = dotenv.env['OPENAI_API_KEY']!;  //Load API key
+  final String? apiKey = dotenv.env['OPENAI_API_KEY'];  // ✅ Load API key safely
 
   Future<String> getChatResponse(String userMessage) async {
+    if (apiKey == null || apiKey!.isEmpty) {
+      return "Error: OPENAI_API_KEY is missing in .env file.";
+    }
+
     const String endpoint = "https://api.openai.com/v1/chat/completions";
 
     final response = await http.post(
